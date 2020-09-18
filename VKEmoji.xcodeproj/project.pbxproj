@@ -13,6 +13,11 @@
 		CA9073472514CDAF00437053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9073452514CDAF00437053 /* Main.storyboard */; };
 		CA9073492514CDB300437053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9073482514CDB300437053 /* Assets.xcassets */; };
 		CA90734C2514CDB300437053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA90734A2514CDB300437053 /* LaunchScreen.storyboard */; };
+		CA9073542514D4D000437053 /* EmojiMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073532514D4D000437053 /* EmojiMapViewController.swift */; };
+		CA9073562514E6E900437053 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073552514E6E900437053 /* EmojiView.swift */; };
+		CA9073582515094400437053 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073572515094400437053 /* EmojiCollectionViewCell.swift */; };
+		CA90735A251536C600437053 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA907359251536C600437053 /* Bubble.swift */; };
+		CA90735C25154F1B00437053 /* PresentDudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90735B25154F1B00437053 /* PresentDudeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		CA9073482514CDB300437053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA90734B2514CDB300437053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA90734D2514CDB300437053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9073532514D4D000437053 /* EmojiMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMapViewController.swift; sourceTree = "<group>"; };
+		CA9073552514E6E900437053 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		CA9073572515094400437053 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA907359251536C600437053 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		CA90735B25154F1B00437053 /* PresentDudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDudeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				CA9073482514CDB300437053 /* Assets.xcassets */,
 				CA90734A2514CDB300437053 /* LaunchScreen.storyboard */,
 				CA90734D2514CDB300437053 /* Info.plist */,
+				CA9073532514D4D000437053 /* EmojiMapViewController.swift */,
+				CA9073552514E6E900437053 /* EmojiView.swift */,
+				CA9073572515094400437053 /* EmojiCollectionViewCell.swift */,
+				CA907359251536C600437053 /* Bubble.swift */,
+				CA90735B25154F1B00437053 /* PresentDudeViewController.swift */,
 			);
 			path = VKEmoji;
 			sourceTree = "<group>";
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9073542514D4D000437053 /* EmojiMapViewController.swift in Sources */,
+				CA9073582515094400437053 /* EmojiCollectionViewCell.swift in Sources */,
 				CA9073442514CDAF00437053 /* ViewController.swift in Sources */,
 				CA9073402514CDAF00437053 /* AppDelegate.swift in Sources */,
+				CA90735C25154F1B00437053 /* PresentDudeViewController.swift in Sources */,
+				CA90735A251536C600437053 /* Bubble.swift in Sources */,
 				CA9073422514CDAF00437053 /* SceneDelegate.swift in Sources */,
+				CA9073562514E6E900437053 /* EmojiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
