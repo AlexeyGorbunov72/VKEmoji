@@ -1,0 +1,6 @@
+module Pods_VKEmoji {
+  umbrella header "Pods-VKEmoji-umbrella.h"
+
+  export *
+  module * { export * }
+}

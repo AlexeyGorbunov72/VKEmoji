@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1103F3A0A8B3B7B9F70E8B2AEF584569 /* Pods-VKEmoji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B9EE1543E83989BABC41481F4DF5DF /* Pods-VKEmoji-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11E1AEE076F72D41BA8087CF2EF30B87 /* ExtendedDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6421E171A0B90BFE92D35FB363EF4B4 /* ExtendedDiff.swift */; };
+		169DDB3C6A25DDF98DB017447E4B94AF /* ExtendedPatch+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381048520680A0AD3BD958A9A79B00 /* ExtendedPatch+Apply.swift */; };
+		3A4F4916FA52DC72C29181DA74434E00 /* Differ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B85C9C7DE5A62A5859C137E7EA1D41 /* Differ-dummy.m */; };
+		4A1C78AD2E15163797278E98A35D4E91 /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86FF5DDF2324D8AA6B52C02612BE72 /* BatchUpdate.swift */; };
+		4A2C11246398DD57F3FE34B0110FA962 /* NestedExtendedDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166C1BC72EE269F19330708C50246AFB /* NestedExtendedDiff.swift */; };
+		597A061B3377A54621C4962AD8EB7F89 /* NestedBatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76B5961E0FA376AB8D6B271CC98074 /* NestedBatchUpdate.swift */; };
+		5C6FEE785F27A9DB50D009637BCB63ED /* Diff+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D1C58C2CAC19DC34D0CB54F95F0137 /* Diff+UIKit.swift */; };
+		6C8D5D5531B5C7B52B32C7138D28CB01 /* ExtendedPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2265E981A1F1DFE289BC9C3BE4402F /* ExtendedPatch.swift */; };
+		9D7352EAC5460F64251F7C7676F369A6 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA4111846612FE0AFEDC0D0DC08F13 /* LinkedList.swift */; };
+		AB627A020373C3D6545C998B4F81ADEF /* Pods-VKEmoji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E42EB18846DA85B74AF44418BCE4E614 /* Pods-VKEmoji-dummy.m */; };
+		B71411FB7FC88423E6EE9C1873037A71 /* Differ-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A8A4B7DD5AA110256B52E23CFAA0088 /* Differ-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B9B6E5E6CDD1D15E74501E31A8B41B67 /* Patch+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564118E792A1CA5A39CAE75D8E4A08B2 /* Patch+Sort.swift */; };
+		C921BD893AEF83B7A81A9A95879EABD4 /* NestedDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A9909A20B9049186D335E8B8688BA5 /* NestedDiff.swift */; };
+		D6D84EF88B12B87DF68ABCC78826C2AE /* Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA3B857E2C71FF2043BF6A013C42A21 /* Patch.swift */; };
+		DACF726CDC33E436E51CEB193734FF79 /* Patch+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF868854DA0D685F80FE7EC5C5AE17CE /* Patch+Apply.swift */; };
+		E68DF9E2157C80F7D074C63DB30241FB /* GenericPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1887CEB71625B6607601AA18B447B /* GenericPatch.swift */; };
+		EDBC983048FBFAA00BD6E01B4DF2CDC1 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B36D13C0E295571398E098CD80CE4B /* Diff.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07B28502BD5627066756E583444F947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A325783180C9BEB3D60A7CAD046D1CF8;
+			remoteInfo = Differ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0123BDF95B5E3E3870CFD4CAF7D5889B /* Differ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Differ.release.xcconfig; sourceTree = "<group>"; };
+		0CF7ABFCA448ED3B1A960C80156FB135 /* Pods-VKEmoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKEmoji.debug.xcconfig"; sourceTree = "<group>"; };
+		166C1BC72EE269F19330708C50246AFB /* NestedExtendedDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NestedExtendedDiff.swift; path = Sources/Differ/NestedExtendedDiff.swift; sourceTree = "<group>"; };
+		19A9909A20B9049186D335E8B8688BA5 /* NestedDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NestedDiff.swift; path = Sources/Differ/NestedDiff.swift; sourceTree = "<group>"; };
+		1D2291EA42A36FB529443F1D9367C118 /* Differ.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Differ.modulemap; sourceTree = "<group>"; };
+		2B6B2480307092EB2E0E7BBE93B69D1C /* libPods-VKEmoji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-VKEmoji.a"; path = "libPods-VKEmoji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B9EE1543E83989BABC41481F4DF5DF /* Pods-VKEmoji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VKEmoji-umbrella.h"; sourceTree = "<group>"; };
+		3436D7C5225069490C685D77EB2E7F20 /* libDiffer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDiffer.a; path = libDiffer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F3335DBE30FC2BD84BFFE01AD0A14C /* Pods-VKEmoji-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VKEmoji-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A8A4B7DD5AA110256B52E23CFAA0088 /* Differ-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Differ-umbrella.h"; sourceTree = "<group>"; };
+		4B76B5961E0FA376AB8D6B271CC98074 /* NestedBatchUpdate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NestedBatchUpdate.swift; path = Sources/Differ/NestedBatchUpdate.swift; sourceTree = "<group>"; };
+		564118E792A1CA5A39CAE75D8E4A08B2 /* Patch+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Patch+Sort.swift"; path = "Sources/Differ/Patch+Sort.swift"; sourceTree = "<group>"; };
+		6896572120CDB035B74958A358459DCA /* Pods-VKEmoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKEmoji.release.xcconfig"; sourceTree = "<group>"; };
+		72D1C58C2CAC19DC34D0CB54F95F0137 /* Diff+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Diff+UIKit.swift"; path = "Sources/Differ/Diff+UIKit.swift"; sourceTree = "<group>"; };
+		77AE95F37784B66B1F8CF1FE15576960 /* Differ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Differ.debug.xcconfig; sourceTree = "<group>"; };
+		7B86FF5DDF2324D8AA6B52C02612BE72 /* BatchUpdate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchUpdate.swift; path = Sources/Differ/BatchUpdate.swift; sourceTree = "<group>"; };
+		89B36D13C0E295571398E098CD80CE4B /* Diff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Sources/Differ/Diff.swift; sourceTree = "<group>"; };
+		8EA3B857E2C71FF2043BF6A013C42A21 /* Patch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Patch.swift; path = Sources/Differ/Patch.swift; sourceTree = "<group>"; };
+		97C1887CEB71625B6607601AA18B447B /* GenericPatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericPatch.swift; path = Sources/Differ/GenericPatch.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A27125CF26D0E7D3EAF87D7AD1965EA8 /* Pods-VKEmoji-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VKEmoji-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2B85C9C7DE5A62A5859C137E7EA1D41 /* Differ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Differ-dummy.m"; sourceTree = "<group>"; };
+		B09640EE8C768169F46F464FC3C2A397 /* Pods-VKEmoji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VKEmoji.modulemap"; sourceTree = "<group>"; };
+		B43E417331F74DA05A05696544698DD0 /* Differ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Differ-prefix.pch"; sourceTree = "<group>"; };
+		C5AA4111846612FE0AFEDC0D0DC08F13 /* LinkedList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = Sources/Differ/LinkedList.swift; sourceTree = "<group>"; };
+		CE2265E981A1F1DFE289BC9C3BE4402F /* ExtendedPatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendedPatch.swift; path = Sources/Differ/ExtendedPatch.swift; sourceTree = "<group>"; };
+		D6421E171A0B90BFE92D35FB363EF4B4 /* ExtendedDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendedDiff.swift; path = Sources/Differ/ExtendedDiff.swift; sourceTree = "<group>"; };
+		DC381048520680A0AD3BD958A9A79B00 /* ExtendedPatch+Apply.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ExtendedPatch+Apply.swift"; path = "Sources/Differ/ExtendedPatch+Apply.swift"; sourceTree = "<group>"; };
+		DF868854DA0D685F80FE7EC5C5AE17CE /* Patch+Apply.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Patch+Apply.swift"; path = "Sources/Differ/Patch+Apply.swift"; sourceTree = "<group>"; };
+		E42EB18846DA85B74AF44418BCE4E614 /* Pods-VKEmoji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VKEmoji-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20BC1A5A605C6234A1268D70E4C3CCC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7CB912BFCF00A610F658AEF6F42898 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19F1CA17FB1A33234A17B7B8206FAE89 /* Differ */ = {
+			isa = PBXGroup;
+			children = (
+				7B86FF5DDF2324D8AA6B52C02612BE72 /* BatchUpdate.swift */,
+				89B36D13C0E295571398E098CD80CE4B /* Diff.swift */,
+				72D1C58C2CAC19DC34D0CB54F95F0137 /* Diff+UIKit.swift */,
+				D6421E171A0B90BFE92D35FB363EF4B4 /* ExtendedDiff.swift */,
+				CE2265E981A1F1DFE289BC9C3BE4402F /* ExtendedPatch.swift */,
+				DC381048520680A0AD3BD958A9A79B00 /* ExtendedPatch+Apply.swift */,
+				97C1887CEB71625B6607601AA18B447B /* GenericPatch.swift */,
+				C5AA4111846612FE0AFEDC0D0DC08F13 /* LinkedList.swift */,
+				4B76B5961E0FA376AB8D6B271CC98074 /* NestedBatchUpdate.swift */,
+				19A9909A20B9049186D335E8B8688BA5 /* NestedDiff.swift */,
+				166C1BC72EE269F19330708C50246AFB /* NestedExtendedDiff.swift */,
+				8EA3B857E2C71FF2043BF6A013C42A21 /* Patch.swift */,
+				DF868854DA0D685F80FE7EC5C5AE17CE /* Patch+Apply.swift */,
+				564118E792A1CA5A39CAE75D8E4A08B2 /* Patch+Sort.swift */,
+				4C69D811994FC1CECC1F6E0BE75E232E /* Support Files */,
+			);
+			name = Differ;
+			path = Differ;
+			sourceTree = "<group>";
+		};
+		1FA0EF568A6AFFE34CB393AC0F790AE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3436D7C5225069490C685D77EB2E7F20 /* libDiffer.a */,
+				2B6B2480307092EB2E0E7BBE93B69D1C /* libPods-VKEmoji.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C69D811994FC1CECC1F6E0BE75E232E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D2291EA42A36FB529443F1D9367C118 /* Differ.modulemap */,
+				A2B85C9C7DE5A62A5859C137E7EA1D41 /* Differ-dummy.m */,
+				B43E417331F74DA05A05696544698DD0 /* Differ-prefix.pch */,
+				3A8A4B7DD5AA110256B52E23CFAA0088 /* Differ-umbrella.h */,
+				77AE95F37784B66B1F8CF1FE15576960 /* Differ.debug.xcconfig */,
+				0123BDF95B5E3E3870CFD4CAF7D5889B /* Differ.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Differ";
+			sourceTree = "<group>";
+		};
+		54C3C69993327543BF86BC1B0929EAF9 /* Pods-VKEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				B09640EE8C768169F46F464FC3C2A397 /* Pods-VKEmoji.modulemap */,
+				A27125CF26D0E7D3EAF87D7AD1965EA8 /* Pods-VKEmoji-acknowledgements.markdown */,
+				36F3335DBE30FC2BD84BFFE01AD0A14C /* Pods-VKEmoji-acknowledgements.plist */,
+				E42EB18846DA85B74AF44418BCE4E614 /* Pods-VKEmoji-dummy.m */,
+				32B9EE1543E83989BABC41481F4DF5DF /* Pods-VKEmoji-umbrella.h */,
+				0CF7ABFCA448ED3B1A960C80156FB135 /* Pods-VKEmoji.debug.xcconfig */,
+				6896572120CDB035B74958A358459DCA /* Pods-VKEmoji.release.xcconfig */,
+			);
+			name = "Pods-VKEmoji";
+			path = "Target Support Files/Pods-VKEmoji";
+			sourceTree = "<group>";
+		};
+		5745991521F6D5F3A12F79E91F19B27C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19F1CA17FB1A33234A17B7B8206FAE89 /* Differ */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				5745991521F6D5F3A12F79E91F19B27C /* Pods */,
+				1FA0EF568A6AFFE34CB393AC0F790AE1 /* Products */,
+				DC3E77F53F3F78F85572C438ACE98E28 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC3E77F53F3F78F85572C438ACE98E28 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54C3C69993327543BF86BC1B0929EAF9 /* Pods-VKEmoji */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57BF88937043C58F5F00A4316A3EB68E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1103F3A0A8B3B7B9F70E8B2AEF584569 /* Pods-VKEmoji-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A015A18F98D3E71419A0B35FB9353B12 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71411FB7FC88423E6EE9C1873037A71 /* Differ-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0366095412C9FB401B3F0407A9DEAFA6 /* Pods-VKEmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86CBF0A95D4157500DB4DB82AA77F493 /* Build configuration list for PBXNativeTarget "Pods-VKEmoji" */;
+			buildPhases = (
+				57BF88937043C58F5F00A4316A3EB68E /* Headers */,
+				70E0E7A541097985D6FAABF0DB6FA643 /* Sources */,
+				20BC1A5A605C6234A1268D70E4C3CCC1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D120D40AFED0E3F2F8BEFCE7A871E88 /* PBXTargetDependency */,
+			);
+			name = "Pods-VKEmoji";
+			productName = "Pods-VKEmoji";
+			productReference = 2B6B2480307092EB2E0E7BBE93B69D1C /* libPods-VKEmoji.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A325783180C9BEB3D60A7CAD046D1CF8 /* Differ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA93742A33049C56917F29ACCC61773 /* Build configuration list for PBXNativeTarget "Differ" */;
+			buildPhases = (
+				A015A18F98D3E71419A0B35FB9353B12 /* Headers */,
+				6418A48E078BDB6C8CF54DF87055A643 /* Sources */,
+				8F7CB912BFCF00A610F658AEF6F42898 /* Frameworks */,
+				E61CB2565C6981AA868C1AB4EA735EE0 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Differ;
+			productName = Differ;
+			productReference = 3436D7C5225069490C685D77EB2E7F20 /* libDiffer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 1FA0EF568A6AFFE34CB393AC0F790AE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A325783180C9BEB3D60A7CAD046D1CF8 /* Differ */,
+				0366095412C9FB401B3F0407A9DEAFA6 /* Pods-VKEmoji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E61CB2565C6981AA868C1AB4EA735EE0 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Differ/Differ.modulemap",
+				"${PODS_ROOT}/Headers/Public/Differ/Differ-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Differ-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Differ/Differ.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Differ/Differ-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6418A48E078BDB6C8CF54DF87055A643 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1C78AD2E15163797278E98A35D4E91 /* BatchUpdate.swift in Sources */,
+				5C6FEE785F27A9DB50D009637BCB63ED /* Diff+UIKit.swift in Sources */,
+				EDBC983048FBFAA00BD6E01B4DF2CDC1 /* Diff.swift in Sources */,
+				3A4F4916FA52DC72C29181DA74434E00 /* Differ-dummy.m in Sources */,
+				11E1AEE076F72D41BA8087CF2EF30B87 /* ExtendedDiff.swift in Sources */,
+				169DDB3C6A25DDF98DB017447E4B94AF /* ExtendedPatch+Apply.swift in Sources */,
+				6C8D5D5531B5C7B52B32C7138D28CB01 /* ExtendedPatch.swift in Sources */,
+				E68DF9E2157C80F7D074C63DB30241FB /* GenericPatch.swift in Sources */,
+				9D7352EAC5460F64251F7C7676F369A6 /* LinkedList.swift in Sources */,
+				597A061B3377A54621C4962AD8EB7F89 /* NestedBatchUpdate.swift in Sources */,
+				C921BD893AEF83B7A81A9A95879EABD4 /* NestedDiff.swift in Sources */,
+				4A2C11246398DD57F3FE34B0110FA962 /* NestedExtendedDiff.swift in Sources */,
+				DACF726CDC33E436E51CEB193734FF79 /* Patch+Apply.swift in Sources */,
+				B9B6E5E6CDD1D15E74501E31A8B41B67 /* Patch+Sort.swift in Sources */,
+				D6D84EF88B12B87DF68ABCC78826C2AE /* Patch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E0E7A541097985D6FAABF0DB6FA643 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB627A020373C3D6545C998B4F81ADEF /* Pods-VKEmoji-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D120D40AFED0E3F2F8BEFCE7A871E88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Differ;
+			target = A325783180C9BEB3D60A7CAD046D1CF8 /* Differ */;
+			targetProxy = 07B28502BD5627066756E583444F947C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4A3325AB842E5C464E62A0C32B72AADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77AE95F37784B66B1F8CF1FE15576960 /* Differ.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Differ/Differ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Differ/Differ.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Differ;
+				PRODUCT_NAME = Differ;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63A684EF88B71E7BED6837B59940C973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF7ABFCA448ED3B1A960C80156FB135 /* Pods-VKEmoji.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		991E281ADD7ABF5F1ED7C1AF4D616543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6896572120CDB035B74958A358459DCA /* Pods-VKEmoji.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1D420B7493F6DC4F3AD378227F26F5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0123BDF95B5E3E3870CFD4CAF7D5889B /* Differ.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Differ/Differ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Differ/Differ.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Differ;
+				PRODUCT_NAME = Differ;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
+				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FA93742A33049C56917F29ACCC61773 /* Build configuration list for PBXNativeTarget "Differ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A3325AB842E5C464E62A0C32B72AADC /* Debug */,
+				F1D420B7493F6DC4F3AD378227F26F5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86CBF0A95D4157500DB4DB82AA77F493 /* Build configuration list for PBXNativeTarget "Pods-VKEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A684EF88B71E7BED6837B59940C973 /* Debug */,
+				991E281ADD7ABF5F1ED7C1AF4D616543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
