@@ -15,6 +15,7 @@ class PresentDudeViewController: UIViewController {
     @IBOutlet weak var labelWithStatusMoodDude: UILabel!
     private var bubble: Bubble?
     override func viewDidLoad() {
+        title = "Фото"
         super.viewDidLoad()
         aDude.layer.cornerRadius = aDude.bounds.height / 2
         switch bubble?.metaEmoji {

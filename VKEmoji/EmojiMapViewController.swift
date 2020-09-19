@@ -8,9 +8,9 @@
 
 import UIKit
 import MapKit
-import Combine
 import CoreLocation
 import Differ
+import Combine
 protocol SelectBubble{
     func didSelectBubble(bubble: Bubble)
 }
@@ -86,9 +86,8 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var topViewConstraint: NSLayoutConstraint!
-    @Published var centerMapLocation: CLLocationCoordinate2D?
     @IBOutlet weak var emojiSearchBar: UISearchBar!
-    var subscriber: AnyCancellable?
+    
     let bottomEmojies = [BottomEmojiCollection(mainEmoji: "🎧", subEmoji: "😃", title: "Музыка"),
                          BottomEmojiCollection(mainEmoji: "🍿", subEmoji: "😃", title: "Фильмы"),
                          BottomEmojiCollection(mainEmoji: "🍂", subEmoji: "😌", title: "Осень"),
@@ -117,7 +116,9 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
         cell.delegateSelect = self
         return cell
     }
-    
+    @Published var centerMapLocation: CLLocationCoordinate2D?
+    var subscriber: AnyCancellable?
+    @IBOutlet weak var buttomConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var EmojiMap: MKMapView!
     @IBOutlet weak var emojiCollection: UICollectionView!
@@ -164,6 +165,8 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
                     self.hideTopView()
                 }
         })
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
         for elm in setOfEmojies{
             setClass.append(Bubble(idOfBubble: 0, title: elm["title"] as! String, type: TypeEmojiView.medium, emoji: elm["emoji"] as! String, location: CLLocationCoordinate2DMake(0, 0), metaEmoji: elm["metaEmoji"] as! EmojiPolicy, pic: elm["pic"] as! String))
         }
@@ -190,15 +193,29 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
         EmojiMap.register(LocationAnnotationView.self, forAnnotationViewWithReuseIdentifier: "bubble")
         
         addCustomAnnotation()
-        print(EmojiMap.visibleAnnotations().count)
+        self.mapViewDidChangeVisibleRegion(EmojiMap)
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    @objc func keyboardWillShow(_ notification: Notification){
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        self.buttomConstraint.constant = keyboardSize.cgRectValue.height - 20
+        UIView.transition(with: view, duration: 0.3, options: .curveEaseIn, animations: { [unowned self] in
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    @objc func keyboardWillHide(_ notification: Notification){
+        self.buttomConstraint.constant = 0
+        UIView.transition(with: view, duration: 0.3, options: .curveEaseIn, animations: { [unowned self] in
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        centerMapLocation = mapView.centerCoordinate
+            centerMapLocation = mapView.centerCoordinate
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -279,8 +296,8 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
     private func generateBubbles(){
         let latitude    = 59.938879
         let longitude   = 30.315212
-        let max = 0.2000000
-        let min = -0.200000
+        let max = 0.26
+        let min = -0.16
         
         for i in 0...100{
             let bubbleLatitude = latitude + Double.random(in: min...max)
@@ -329,6 +346,10 @@ extension EmojiMapViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
         sortDataAnimate(title: searchText)
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        view.endEditing(true)
+        
     }
     
 }

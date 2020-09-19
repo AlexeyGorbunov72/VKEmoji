@@ -8,36 +8,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Новости-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VKEmoji" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Новости" id="BYZ-38-t0r" customClass="ViewController" customModule="VKEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-ab-hvz">
+                                <rect key="frame" x="345" y="764" width="52" height="52"/>
+                                <state key="normal" image="planet"/>
+                                <connections>
+                                    <segue destination="bns-hX-nvw" kind="push" id="ExJ-Ps-OV0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ePE-ab-hvz" secondAttribute="bottom" constant="80" id="5zm-Nt-V5k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ePE-ab-hvz" secondAttribute="trailing" constant="17" id="OWc-vR-Pa2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mhe-rQ-Zhp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="120"/>
+            <point key="canvasLocation" x="120" y="120"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Navigation Controller-->
         <scene sceneID="Vlx-OS-Ts5">
             <objects>
-                <navigationController id="RCB-ER-KEq" sceneMemberID="viewController">
+                <navigationController id="RCB-ER-KEq" customClass="MyNavigationController" customModule="VKEmoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dtl-07-Fe3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ihx-pc-wR2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bns-hX-nvw" kind="relationship" relationship="rootViewController" id="z99-yz-cgY"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wfm-PE-C4w"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oug-g3-guB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="-562"/>
+            <point key="canvasLocation" x="-955" y="120"/>
         </scene>
         <!--Emoji Map View Controller-->
         <scene sceneID="2zo-B9-5Nx">
@@ -50,8 +65,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-WJ-5qx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="593"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-iA-dQp">
-                                <rect key="frame" x="0.0" y="710" width="414" height="186"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-iA-dQp">
+                                <rect key="frame" x="0.0" y="710" width="414" height="141"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Поиск по теме и настроению" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-6X-h1d">
                                         <rect key="frame" x="12" y="12" width="390" height="36"/>
@@ -198,6 +213,17 @@
                                     <constraint firstAttribute="height" constant="36" id="nsd-d0-n68"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-de-qKh">
+                                <rect key="frame" x="361" y="90" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="UuQ-4h-u4q"/>
+                                    <constraint firstAttribute="height" constant="32" id="xlm-Fy-CWH"/>
+                                </constraints>
+                                <state key="normal" image="dismiss"/>
+                                <connections>
+                                    <segue destination="RCB-ER-KEq" kind="modal" modalPresentationStyle="fullScreen" id="fNY-6L-mb4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -206,9 +232,11 @@
                             <constraint firstAttribute="bottom" secondItem="f5a-WJ-5qx" secondAttribute="bottom" constant="160" id="6kZ-rA-tAJ"/>
                             <constraint firstAttribute="trailing" secondItem="dJh-iA-dQp" secondAttribute="trailing" id="76P-IR-Siw"/>
                             <constraint firstItem="f5a-WJ-5qx" firstAttribute="top" secondItem="QZ2-fF-3Yu" secondAttribute="top" id="MqG-68-pN0"/>
+                            <constraint firstItem="u1U-de-qKh" firstAttribute="top" secondItem="j2v-Is-sE1" secondAttribute="top" constant="2" id="RJB-fJ-lNH"/>
                             <constraint firstItem="X5Z-BW-cJD" firstAttribute="top" secondItem="j2v-Is-sE1" secondAttribute="top" constant="-300" id="S6Z-VR-oMO"/>
                             <constraint firstItem="dJh-iA-dQp" firstAttribute="leading" secondItem="QZ2-fF-3Yu" secondAttribute="leading" id="fbu-BT-Rgm"/>
                             <constraint firstAttribute="trailing" secondItem="f5a-WJ-5qx" secondAttribute="trailing" id="o0Z-Qf-QxL"/>
+                            <constraint firstItem="j2v-Is-sE1" firstAttribute="trailing" secondItem="u1U-de-qKh" secondAttribute="trailing" constant="21" id="pOn-iB-alF"/>
                             <constraint firstAttribute="bottom" secondItem="dJh-iA-dQp" secondAttribute="bottom" id="vGC-tL-Lma"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j2v-Is-sE1"/>
@@ -217,6 +245,7 @@
                     <connections>
                         <outlet property="EmojiMap" destination="f5a-WJ-5qx" id="XhA-lW-kLt"/>
                         <outlet property="bottomView" destination="dJh-iA-dQp" id="6TB-Gq-dEp"/>
+                        <outlet property="buttomConstraint" destination="vGC-tL-Lma" id="20o-xW-Q2B"/>
                         <outlet property="emojiCollection" destination="iMy-tN-mvN" id="zwc-aY-sr2"/>
                         <outlet property="emojiSearchBar" destination="SKr-6X-h1d" id="66b-Y8-f2o"/>
                         <outlet property="topEmojiLabel" destination="eYa-Wi-VN9" id="j0g-qx-Z9A"/>
@@ -310,6 +339,8 @@
     <resources>
         <image name="borger" width="16" height="4"/>
         <image name="chevronDown" width="8" height="5"/>
+        <image name="dismiss" width="32" height="32"/>
+        <image name="planet" width="52" height="52"/>
         <image name="userPic" width="400" height="400"/>
     </resources>
 </document>

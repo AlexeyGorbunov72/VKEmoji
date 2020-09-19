@@ -19,6 +19,7 @@
 		CA9073582515094400437053 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073572515094400437053 /* EmojiCollectionViewCell.swift */; };
 		CA90735A251536C600437053 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA907359251536C600437053 /* Bubble.swift */; };
 		CA90735C25154F1B00437053 /* PresentDudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90735B25154F1B00437053 /* PresentDudeViewController.swift */; };
+		CACECA5A2516001D00B085F0 /* MyNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACECA592516001D00B085F0 /* MyNavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CA9073572515094400437053 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA907359251536C600437053 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		CA90735B25154F1B00437053 /* PresentDudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDudeViewController.swift; sourceTree = "<group>"; };
+		CACECA592516001D00B085F0 /* MyNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavController.swift; sourceTree = "<group>"; };
 		E1979CE61F04365D769EDCAF /* Pods-VKEmoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKEmoji.release.xcconfig"; path = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.release.xcconfig"; sourceTree = "<group>"; };
 		F65989351F020EEB618E45A1 /* Pods-VKEmoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKEmoji.debug.xcconfig"; path = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				CA9073572515094400437053 /* EmojiCollectionViewCell.swift */,
 				CA907359251536C600437053 /* Bubble.swift */,
 				CA90735B25154F1B00437053 /* PresentDudeViewController.swift */,
+				CACECA592516001D00B085F0 /* MyNavController.swift */,
 			);
 			path = VKEmoji;
 			sourceTree = "<group>";
@@ -95,7 +98,6 @@
 				F65989351F020EEB618E45A1 /* Pods-VKEmoji.debug.xcconfig */,
 				E1979CE61F04365D769EDCAF /* Pods-VKEmoji.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 				CA9073442514CDAF00437053 /* ViewController.swift in Sources */,
 				CA9073402514CDAF00437053 /* AppDelegate.swift in Sources */,
 				CA90735C25154F1B00437053 /* PresentDudeViewController.swift in Sources */,
+				CACECA5A2516001D00B085F0 /* MyNavController.swift in Sources */,
 				CA90735A251536C600437053 /* Bubble.swift in Sources */,
 				CA9073422514CDAF00437053 /* SceneDelegate.swift in Sources */,
 				CA9073562514E6E900437053 /* EmojiView.swift in Sources */,
