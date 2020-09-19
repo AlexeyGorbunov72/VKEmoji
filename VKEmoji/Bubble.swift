@@ -6,7 +6,11 @@
 //  Copyright © 2020 Alexey. All rights reserved.
 //
 import MapKit
-struct Bubble{
+struct Bubble: Equatable{
+    static func == (lhs: Bubble, rhs: Bubble) -> Bool {
+        return lhs.title == rhs.title
+    }
+    
     var idOfBubble: Int
     var title: String
     var type: TypeEmojiView

@@ -53,7 +53,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-iA-dQp">
                                 <rect key="frame" x="0.0" y="710" width="414" height="186"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-6X-h1d">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Поиск по теме и настроению" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-6X-h1d">
                                         <rect key="frame" x="12" y="12" width="390" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="6e8-BU-zAZ"/>
@@ -164,7 +164,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-BW-cJD">
-                                <rect key="frame" x="99" y="88" width="216" height="36"/>
+                                <rect key="frame" x="99" y="-212" width="216" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-Wi-VN9">
                                         <rect key="frame" x="12" y="8" width="23" height="19.5"/>
@@ -206,7 +206,7 @@
                             <constraint firstAttribute="bottom" secondItem="f5a-WJ-5qx" secondAttribute="bottom" constant="160" id="6kZ-rA-tAJ"/>
                             <constraint firstAttribute="trailing" secondItem="dJh-iA-dQp" secondAttribute="trailing" id="76P-IR-Siw"/>
                             <constraint firstItem="f5a-WJ-5qx" firstAttribute="top" secondItem="QZ2-fF-3Yu" secondAttribute="top" id="MqG-68-pN0"/>
-                            <constraint firstItem="X5Z-BW-cJD" firstAttribute="top" secondItem="j2v-Is-sE1" secondAttribute="top" id="S6Z-VR-oMO"/>
+                            <constraint firstItem="X5Z-BW-cJD" firstAttribute="top" secondItem="j2v-Is-sE1" secondAttribute="top" constant="-300" id="S6Z-VR-oMO"/>
                             <constraint firstItem="dJh-iA-dQp" firstAttribute="leading" secondItem="QZ2-fF-3Yu" secondAttribute="leading" id="fbu-BT-Rgm"/>
                             <constraint firstAttribute="trailing" secondItem="f5a-WJ-5qx" secondAttribute="trailing" id="o0Z-Qf-QxL"/>
                             <constraint firstAttribute="bottom" secondItem="dJh-iA-dQp" secondAttribute="bottom" id="vGC-tL-Lma"/>
@@ -218,6 +218,7 @@
                         <outlet property="EmojiMap" destination="f5a-WJ-5qx" id="XhA-lW-kLt"/>
                         <outlet property="bottomView" destination="dJh-iA-dQp" id="6TB-Gq-dEp"/>
                         <outlet property="emojiCollection" destination="iMy-tN-mvN" id="zwc-aY-sr2"/>
+                        <outlet property="emojiSearchBar" destination="SKr-6X-h1d" id="66b-Y8-f2o"/>
                         <outlet property="topEmojiLabel" destination="eYa-Wi-VN9" id="j0g-qx-Z9A"/>
                         <outlet property="topLabel" destination="XnZ-dS-hqR" id="Dps-n9-QG6"/>
                         <outlet property="topView" destination="X5Z-BW-cJD" id="UuK-Jd-xOs"/>
@@ -247,13 +248,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Михаил" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-1l-vHv">
-                                        <rect key="frame" x="70" y="12" width="55.5" height="18"/>
+                                        <rect key="frame" x="70" y="16" width="55.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="час назад • " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njy-IY-88i">
-                                        <rect key="frame" x="70" y="32" width="298" height="14.5"/>
+                                        <rect key="frame" x="70" y="36" width="298" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.44153946640000002" green="0.48931151630000003" blue="0.54759633539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -279,7 +280,7 @@
                                     <constraint firstItem="RqK-UQ-7AJ" firstAttribute="top" secondItem="15B-It-jLm" secondAttribute="top" constant="24" id="QX0-fo-JWG"/>
                                     <constraint firstAttribute="bottom" secondItem="PuS-q3-uQf" secondAttribute="bottom" id="Rav-Ca-dnV"/>
                                     <constraint firstItem="njy-IY-88i" firstAttribute="top" secondItem="MsV-1l-vHv" secondAttribute="bottom" constant="2" id="UXf-9H-bur"/>
-                                    <constraint firstItem="MsV-1l-vHv" firstAttribute="top" secondItem="15B-It-jLm" secondAttribute="top" constant="12" id="cfK-EX-H8B"/>
+                                    <constraint firstItem="MsV-1l-vHv" firstAttribute="top" secondItem="15B-It-jLm" secondAttribute="top" constant="16" id="cfK-EX-H8B"/>
                                     <constraint firstItem="PuS-q3-uQf" firstAttribute="top" secondItem="K47-1g-P5d" secondAttribute="bottom" constant="8" id="g6Q-jU-nut"/>
                                     <constraint firstItem="PuS-q3-uQf" firstAttribute="leading" secondItem="15B-It-jLm" secondAttribute="leading" id="kGy-XA-rn7"/>
                                     <constraint firstItem="K47-1g-P5d" firstAttribute="leading" secondItem="15B-It-jLm" secondAttribute="leading" constant="12" id="sPf-E4-y5k"/>

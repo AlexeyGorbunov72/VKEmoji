@@ -14,11 +14,13 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var subVeiw: UIView!
-    
-    func setUp(subEmoji: String, mainEmoji: String, title: String){
-        self.subEmoji.text = subEmoji
+    private var titleRaw = ""
+    var delegateSelect: SelectEmoji?
+    func setUp(subEmoji: EmojiPolicy, mainEmoji: String, title: String){
+        self.subEmoji.text = subEmoji.emoji
         self.mainEmoji.text = mainEmoji
         self.title.text = title
+        titleRaw = title
         subVeiw.layer.cornerRadius = subVeiw.bounds.height / 2
         mainView.layer.cornerRadius = mainView.bounds.height / 2
         mainView.layer.borderWidth = 1
@@ -30,9 +32,13 @@ class EmojiCollectionViewCell: UICollectionViewCell {
         subVeiw.layer.shadowOpacity = 1
         subVeiw.layer.shadowRadius = 1
         subVeiw.layer.shadowOffset = CGSize(width: 0, height: 1)
-        
         self.contentView.layer.masksToBounds = false
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapOnMe(_:)))
+        self.contentView.addGestureRecognizer(tapGestureRecognizer)
 
+    }
+    @objc func tapOnMe(_ sender: UITapGestureRecognizer){
+        delegateSelect?.didSelectEmojiBottom(title: titleRaw)
     }
     
 }

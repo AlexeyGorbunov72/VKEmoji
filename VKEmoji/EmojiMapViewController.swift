@@ -10,8 +10,12 @@ import UIKit
 import MapKit
 import Combine
 import CoreLocation
+import Differ
 protocol SelectBubble{
     func didSelectBubble(bubble: Bubble)
+}
+protocol SelectEmoji {
+    func didSelectEmojiBottom(title: String)
 }
 class CustomAnnotation: NSObject, MKAnnotation
 {
@@ -83,6 +87,7 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var topViewConstraint: NSLayoutConstraint!
     @Published var centerMapLocation: CLLocationCoordinate2D?
+    @IBOutlet weak var emojiSearchBar: UISearchBar!
     var subscriber: AnyCancellable?
     let bottomEmojies = [BottomEmojiCollection(mainEmoji: "🎧", subEmoji: "😃", title: "Музыка"),
                          BottomEmojiCollection(mainEmoji: "🍿", subEmoji: "😃", title: "Фильмы"),
@@ -92,7 +97,7 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
     var bubbles: [Bubble] = []
     var setOfEmojies = [
         ["emoji" : "💻", "title" : "IT", "metaEmoji": EmojiPolicy.energy, "pic": "it"],
-        ["emoji" : "📷", "title" : "Фото", "metaEmoji": EmojiPolicy.energy, "pic": "photo"],
+        ["emoji" : "📷", "title" : "Фото", "metaEmoji": EmojiPolicy.low, "pic": "photo"],
         ["emoji" : "🚗", "title" : "Пробка", "metaEmoji": EmojiPolicy.negative, "pic": "car"],
         ["emoji" : "🎧️", "title" : "Музыка", "metaEmoji": EmojiPolicy.energy, "pic": "music"],
         ["emoji" : "🍿", "title" : "Кино", "metaEmoji": EmojiPolicy.positive, "pic": "cinima"],
@@ -100,14 +105,16 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
         ["emoji" : "👔", "title" : "Работа", "metaEmoji": EmojiPolicy.energy, "pic": "work"],
         ["emoji" : "😷", "title" : "Карантин", "metaEmoji": EmojiPolicy.negative, "pic": "mask"],
         ["emoji" : "🍂", "title" : "Осень", "metaEmoji": EmojiPolicy.low, "pic": "atumn"]]
+    var setClass: [Bubble] = []
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bottomEmojies.count
+        return setOfEmojies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! EmojiCollectionViewCell
-        let data = bottomEmojies[indexPath.row]
-        cell.setUp(subEmoji: data.subEmoji, mainEmoji: data.mainEmoji, title: data.title)
+        let data = setClass[indexPath.row]
+        cell.setUp(subEmoji: data.metaEmoji, mainEmoji: data.emoji, title: data.title)
+        cell.delegateSelect = self
         return cell
     }
     
@@ -133,7 +140,6 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
                         dict[visible.bubble.metaEmoji]! += visible.bubble.type.rawValue
                     }
                     let maxPolicyEmoji = dict.max { a, b in a.value < b.value }
-                    print(maxPolicyEmoji)
                     let emoji = maxPolicyEmoji?.key.emoji
                     var moodText = ""
                     switch maxPolicyEmoji?.key{
@@ -158,7 +164,11 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
                     self.hideTopView()
                 }
         })
-        topView.layer.cornerRadius = topView.bounds.height / 2
+        for elm in setOfEmojies{
+            setClass.append(Bubble(idOfBubble: 0, title: elm["title"] as! String, type: TypeEmojiView.medium, emoji: elm["emoji"] as! String, location: CLLocationCoordinate2DMake(0, 0), metaEmoji: elm["metaEmoji"] as! EmojiPolicy, pic: elm["pic"] as! String))
+        }
+        emojiSearchBar.delegate = self
+        topView.layer.cornerRadius = 10
         topView.layer.masksToBounds = false
         topView.layer.shadowRadius = 2
         topView.layer.shadowOpacity = 1
@@ -216,7 +226,7 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
     }
     private func hideTopView(){
         self.topViewConstraint.constant = -300
-        UIView.transition(with: self.topView, duration: 0.3, options: .curveEaseIn, animations: { [unowned self] in
+        UIView.transition(with: self.topView, duration: 0.5, options: .curveEaseIn, animations: { [unowned self] in
                 self.view.layoutIfNeeded()
                 }, completion: nil)
     }
@@ -226,7 +236,7 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
             return
         }
         self.topViewConstraint.constant = 0
-        UIView.transition(with: self.topView, duration: 0.3, options: .curveEaseIn, animations: { [unowned self] in
+        UIView.transition(with: self.topView, duration: 0.5, options: .curveEaseIn, animations: { [unowned self] in
                 self.view.layoutIfNeeded()
                 }, completion: nil)
     }
@@ -240,6 +250,31 @@ class EmojiMapViewController: UIViewController, MKMapViewDelegate, UICollectionV
             }, completion: nil)
         }
         
+    }
+    private func sortDataAnimate(title: String){
+        let new = setClass.sorted {
+            return compare(lht: $0.title.lowercased(), rht: $1.title.lowercased(), title: title.lowercased())
+        }
+        emojiCollection.animateItemChanges(oldData: self.setClass, newData: new, updateData: { self.setClass = new})
+    }
+    private func compare(lht: String, rht: String, title: String) -> Bool{
+        var leftCounter = 0
+        var rightCounter = 0
+        for c in lht{
+            for cs in title{
+                if c == cs{
+                    leftCounter += 1
+                }
+            }
+        }
+        for c in rht{
+            for cs in title{
+                if c == cs{
+                    rightCounter += 1
+                }
+            }
+        }
+        return leftCounter > rightCounter
     }
     private func generateBubbles(){
         let latitude    = 59.938879
@@ -277,3 +312,24 @@ extension MKMapView {
         return self.annotations(in: self.visibleMapRect).map { obj -> CustomAnnotation in return obj as! CustomAnnotation }
     }
 }
+
+extension EmojiMapViewController: SelectEmoji{
+    func didSelectEmojiBottom(title: String) {
+        for bubble in bubbles{
+            if bubble.title == title{
+                let region = MKCoordinateRegion(center: bubble.location, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                EmojiMap.setRegion(region, animated: true)
+            }
+        }
+    }
+}
+
+extension EmojiMapViewController: UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        sortDataAnimate(title: searchText)
+    }
+    
+}
+

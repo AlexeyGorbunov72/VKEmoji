@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772F73C47D23671A76A27092 /* libPods-VKEmoji.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701F2713D5F1479D0799832 /* libPods-VKEmoji.a */; };
 		CA9073402514CDAF00437053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90733F2514CDAF00437053 /* AppDelegate.swift */; };
 		CA9073422514CDAF00437053 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073412514CDAF00437053 /* SceneDelegate.swift */; };
 		CA9073442514CDAF00437053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9073432514CDAF00437053 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5701F2713D5F1479D0799832 /* libPods-VKEmoji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKEmoji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA90733C2514CDAF00437053 /* VKEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA90733F2514CDAF00437053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA9073412514CDAF00437053 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		CA9073572515094400437053 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA907359251536C600437053 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		CA90735B25154F1B00437053 /* PresentDudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDudeViewController.swift; sourceTree = "<group>"; };
+		E1979CE61F04365D769EDCAF /* Pods-VKEmoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKEmoji.release.xcconfig"; path = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.release.xcconfig"; sourceTree = "<group>"; };
+		F65989351F020EEB618E45A1 /* Pods-VKEmoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKEmoji.debug.xcconfig"; path = "Target Support Files/Pods-VKEmoji/Pods-VKEmoji.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772F73C47D23671A76A27092 /* libPods-VKEmoji.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				CA90733E2514CDAF00437053 /* VKEmoji */,
 				CA90733D2514CDAF00437053 /* Products */,
+				CBB527633DB4DE2204262DCA /* Pods */,
+				E86676885891DDCA2D76E28C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,24 @@
 			path = VKEmoji;
 			sourceTree = "<group>";
 		};
+		CBB527633DB4DE2204262DCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F65989351F020EEB618E45A1 /* Pods-VKEmoji.debug.xcconfig */,
+				E1979CE61F04365D769EDCAF /* Pods-VKEmoji.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E86676885891DDCA2D76E28C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5701F2713D5F1479D0799832 /* libPods-VKEmoji.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +114,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA9073502514CDB300437053 /* Build configuration list for PBXNativeTarget "VKEmoji" */;
 			buildPhases = (
+				34C3EF379AEE26B1FFDCB4BC /* [CP] Check Pods Manifest.lock */,
 				CA9073382514CDAE00437053 /* Sources */,
 				CA9073392514CDAE00437053 /* Frameworks */,
 				CA90733A2514CDAE00437053 /* Resources */,
@@ -147,6 +173,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34C3EF379AEE26B1FFDCB4BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKEmoji-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA9073382514CDAE00437053 /* Sources */ = {
@@ -302,6 +353,7 @@
 		};
 		CA9073512514CDB300437053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65989351F020EEB618E45A1 /* Pods-VKEmoji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +372,7 @@
 		};
 		CA9073522514CDB300437053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1979CE61F04365D769EDCAF /* Pods-VKEmoji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
